@@ -5,6 +5,7 @@ public class Main {
     System.out.println("Hello world!");
     System.out.println(shouldWakeUp(true, 1));
     System.out.println(hasTeen(22, 23, 34));
+    System.out.println(isCatPlaying(false, 35));
   }
 
   public static boolean shouldWakeUp(boolean isBarking, int clock) {
@@ -31,10 +32,17 @@ public class Main {
       return false;
     }
   }
-//
-//    public static boolean isCatPlaying(boolean isSummer, int temp) {
-//
-//    }
+
+    public static boolean isCatPlaying(boolean isSummer, int temp) {
+      if(isSummer && temp<=45 && temp>=25) {
+        return true;
+      } else if (!isSummer && temp<=35 && temp>=25) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    }
 //
 //    public static double area(double width, double height) {
 //
