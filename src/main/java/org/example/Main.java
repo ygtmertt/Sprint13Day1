@@ -6,6 +6,8 @@ public class Main {
     System.out.println(shouldWakeUp(true, 1));
     System.out.println(hasTeen(22, 23, 34));
     System.out.println(isCatPlaying(false, 35));
+    System.out.println(area(5));
+    System.out.println(area(5.0, 4.0));
   }
 
   public static boolean shouldWakeUp(boolean isBarking, int clock) {
@@ -24,8 +26,8 @@ public class Main {
 
   public static boolean hasTeen(int firstAge, int secondAge, int thirdAge) {
     if(firstAge<=19 && firstAge>=9 ||
-        secondAge<=19 && secondAge>=9 ||
-        thirdAge<=19 && thirdAge>=9) {
+            secondAge<=19 && secondAge>=9 ||
+            thirdAge<=19 && thirdAge>=9) {
       return true;
     }
     else {
@@ -33,22 +35,30 @@ public class Main {
     }
   }
 
-    public static boolean isCatPlaying(boolean isSummer, int temp) {
-      if(isSummer && temp<=45 && temp>=25) {
-        return true;
-      } else if (!isSummer && temp<=35 && temp>=25) {
-        return true;
-      }
-      else {
-        return false;
-      }
+  public static boolean isCatPlaying(boolean isSummer, int temp) {
+    if(isSummer && temp<=45 && temp>=25) {
+      return true;
+    } else if (!isSummer && temp<=35 && temp>=25) {
+      return true;
     }
-//
-//    public static double area(double width, double height) {
-//
-//    }
-//
-//    public static double area(double radius) {
-//
-//    }
+    else {
+      return false;
+    }
+  }
+  public static double area(double width, double height) {
+    if(width<0 || height<0) {
+      return -1;
+    }
+    else {
+      return width*height;
+    }
+  }
+
+  public static double area(double radius) {
+    if (radius < 0) {
+      return -1;
+    } else {
+      return radius * radius * Math.PI;
+    }
+  }
 }
